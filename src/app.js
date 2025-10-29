@@ -30,11 +30,11 @@ const buttonRef = document.querySelector(".addBookmarkBtn")
 const listRef = document.querySelector(".bookmarkList")
 let books = []
 function render(){
-    listRef.innerHTML = books.map(item => {
+    listRef.innerHTML = books.map((item, index) => {
         return `<li>
         <a href="${item}">${item}</a>
-        <button type="button" class="btnEdit">Edit</button>
-        <button type="button" class="btnDelete">X</button>
+        <button type="button" class="edit">Edit</button>
+        <button type="button" class="delete">X</button>
     </li>`
     })
 }
